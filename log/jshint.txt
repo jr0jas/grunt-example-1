@@ -1,1 +1,108 @@
-[31m>> [39m0 files linted. Please check your ignored files.
+
+[1m   ../src/js/example.js[22m
+      1 |[90m'use strict';[39m
+         ^ Use the function form of "use strict".
+[1m   ../src/js/main.js[22m
+    133 |[90m        if ( num == null ) {[39m
+                          ^ Use '===' to compare with 'null'.
+    225 |[90m        if ( ( options = arguments[ i ] ) != null ) {[39m
+                                                   ^ Use '!==' to compare with 'null'.
+    285 |[90m        return obj != null && obj === obj.window;[39m
+                            ^ Use '!==' to compare with 'null'.
+    336 |[90m        if ( obj == null ) {[39m
+                          ^ Use '===' to compare with 'null'.
+    385 |[90m        return text == null ?[39m
+                             ^ Use '===' to compare with 'null'.
+    394 |[90m        if ( arr != null ) {[39m
+                          ^ Use '!==' to compare with 'null'.
+    409 |[90m        return arr == null ? -1 : indexOf.call( arr, elem, i );[39m
+                            ^ Use '===' to compare with 'null'.
+    459 |[90m                if ( value != null ) {[39m
+                                    ^ Use '!==' to compare with 'null'.
+    469 |[90m                if ( value != null ) {[39m
+                                    ^ Use '!==' to compare with 'null'.
+    739 |[90m    arr[ preferredDoc.childNodes.length ].nodeType;[39m
+                                                   ^ Expected an assignment or function call and instead saw an expression.
+   1777 |[90m                if ( result == null ) {[39m
+                                     ^ Use '===' to compare with 'null'.
+   2066 |[90m                elem.parentNode.selectedIndex;[39m
+                                         ^ Expected an assignment or function call and instead saw an expression.
+   2111 |[90m                ( (attr = elem.getAttribute("type")) == null || attr.toLowerCase() === "text" );[39m
+                                                              ^ Use '===' to compare with 'null'.
+   2345 |[90m        mapped = map != null;[39m
+                              ^ Use '!==' to compare with 'null'.
+   2525 |[90m                dirrunsUnique = (dirruns += contextBackup == null ? 1 : Math.random() || 0.1),[39m
+                                                                   ^ Use '===' to compare with 'null'.
+   2535 |[90m            for ( ; i !== len && (elem = elems[i]) != null; i++ ) {[39m
+                                                            ^ Use '!==' to compare with 'null'.
+   2782 |[90m    return el.getAttribute("disabled") == null;[39m
+                                                ^ Use '===' to compare with 'null'.
+   2856 |[90m            return !!qualifier.call( elem, i, elem ) !== not;[39m
+                            ^ Confusing use of '!'.
+   3150 |[90m        return this.add( selector == null ?[39m
+                                           ^ Use '===' to compare with 'null'.
+   3488 |[90m    } catch ( value ) {[39m
+                             ^ Value of 'value' may be overwritten in IE 8 and earlier.
+   3722 |[90m                    return obj != null ? jQuery.extend( obj, promise ) : promise;[39m
+                                        ^ Use '!==' to compare with 'null'.
+   3955 |[90m        bulk = key == null;[39m
+                            ^ Use '===' to compare with 'null'.
+   4018 |[90m    return owner.nodeType === 1 || owner.nodeType === 9 || !( +owner.nodeType );[39m
+                                                                    ^ Confusing use of '!'.
+   4659 |[90m        if ( values[ index ] != null ) {[39m
+                                      ^ Use '!==' to compare with 'null'.
+   4919 |[90m    if ( data == null && fn == null ) {[39m
+                       ^ Use '===' to compare with 'null'.
+   4919 |[90m    if ( data == null && fn == null ) {[39m
+                                     ^ Use '===' to compare with 'null'.
+   4924 |[90m    } else if ( fn == null ) {[39m
+                            ^ Use '===' to compare with 'null'.
+   5501 |[90m        if ( event.which == null && rkeyEvent.test( event.type ) ) {[39m
+                                  ^ Use '===' to compare with 'null'.
+   5502 |[90m            return event.charCode != null ? event.charCode : event.keyCode;[39m
+                                           ^ Use '!==' to compare with 'null'.
+   5798 |[90m    for ( ; ( node = nodes[ i ] ) != null; i++ ) {[39m
+                                           ^ Use '!==' to compare with 'null'.
+   5955 |[90m        for ( ; ( elem = this[ i ] ) != null; i++ ) {[39m
+                                              ^ Use '!==' to compare with 'null'.
+   5970 |[90m        dataAndEvents = dataAndEvents == null ? false : dataAndEvents;[39m
+                                               ^ Use '===' to compare with 'null'.
+   5971 |[90m        deepDataAndEvents = deepDataAndEvents == null ? dataAndEvents : deepDataAndEvents;[39m
+                                                       ^ Use '===' to compare with 'null'.
+   6338 |[90m    if ( val <= 0 || val == null ) {[39m
+                                  ^ Use '===' to compare with 'null'.
+   6342 |[90m        if ( val < 0 || val == null ) {[39m
+                                     ^ Use '===' to compare with 'null'.
+   6444 |[90m            if ( value == null || value !== value ) {[39m
+                                ^ Use '===' to compare with 'null'.
+   6687 |[90m                tween.elem[ tween.prop ] != null && tween.elem.style[ tween.prop ] == null ) {[39m
+                                                  ^ Use '!==' to compare with 'null'.
+   6687 |[90m                tween.elem[ tween.prop ] != null && tween.elem.style[ tween.prop ] == null ) {[39m
+                                                                                            ^ Use '===' to compare with 'null'.
+   6708 |[90m                ( tween.elem.style[ jQuery.cssProps[ tween.prop ] ] != null ||[39m
+                                                                             ^ Use '!==' to compare with 'null'.
+   6804 |[90m        anim = this,[39m
+                        ^ If a strict mode function is executed using function invocation, its 'this' value will be undefined.
+   6813 |[90m        if ( hooks.unqueued == null ) {[39m
+                                     ^ Use '===' to compare with 'null'.
+   6874 |[90m        if ( restoreDisplay == null ) {[39m
+                                     ^ Use '===' to compare with 'null'.
+   6892 |[90m        if ( display === "inline" || display === "inline-block" && restoreDisplay != null ) {[39m
+                                                                                           ^ Use '!==' to compare with 'null'.
+   6900 |[90m                    if ( restoreDisplay == null ) {[39m
+                                                 ^ Use '===' to compare with 'null'.
+   6945 |[90m            anim.done( function() {[39m
+                                ^ Don't make functions within a loop.
+   7188 |[90m    if ( opt.queue == null || opt.queue === true ) {[39m
+                            ^ Use '===' to compare with 'null'.
+   7254 |[90m                index = type != null && type + "queueHooks",[39m
+                                      ^ Use '!==' to compare with 'null'.
+   7272 |[90m                    ( type == null || timers[ index ].queue === type ) ) {[39m
+                                    ^ Use '===' to compare with 'null'.
+   7334 |[90m        return speed == null || typeof speed === "boolean" ?[39m
+                              ^ Use '===' to compare with 'null'.
+   7512 |[90m        return ret == null ? undefined : ret;[39m
+                            ^ Use '===' to compare with 'null'.
+[31m>> [39mToo many errors. (73% scanned).
+
+[31m>> [39m52 errors in 2 files

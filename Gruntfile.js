@@ -49,6 +49,21 @@ module.exports = function(grunt) {
 	        src: ['dist/js/*.js'],
 	        dest: 'dist/js/bundle.js'
       	  }
+    	},htmlhint: {
+    		templates: {
+    			options: {
+    				'attr-lower-case': true,
+    				'attr-value-not-empty': true,
+    				'tag-pair': true,
+    				'tag-self-close': true,
+    				'tagname-lowercase': true,
+    				'id-class-value': true,
+    				'id-class-unique': true,
+    				'src-not-empty': true,
+    				'img-alt-required': true
+    			},
+    			src:'src/templates/*.html'
+    		}
     	}
 			
 	});
@@ -59,7 +74,26 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-htmlhint');
+	grunt.loadNpmTasks('grunt-htmlmin');
+	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-contrib-csslint');
 
-	grunt.registerTask('default', ['clean', 'jshint', 'uglify', 'concat']);
+	/*
+		npm install  grunt-contrib-clean --save-dev
+		npm install  grunt-typescript --save-dev
+		npm install  grunt-contrib-jshint --save-dev
+		npm install  grunt-contrib-uglify --save-dev
+		npm install  grunt-contrib-concat --save-dev
+		npm install  grunt-htmlhint --save-dev
+		npm install  grunt-htmlmin --save-dev
+		npm install  grunt-contrib-sass --save-dev
+		npm install  grunt-contrib-jshint --save-dev
+		npm install  grunt-contrib-csslint --save-dev
+
+	*/
+
+	grunt.registerTask('default', ['clean', 'jshint', 'uglify', 'concat', 'htmlhint']);
+   
 
 };

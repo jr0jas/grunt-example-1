@@ -1,0 +1,8 @@
+.vehicle-qualifier__header-bar {
+	.	     margin: 0 auto;
+	.	     border-bottom: 1px solid #dedede;
+	.	     background-color: #EEE;
+	.	     position: static;
+	.	     top: 0;
+	.	     width: 100%;
+}
