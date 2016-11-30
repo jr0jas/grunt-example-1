@@ -38,10 +38,10 @@ module.exports = function(grunt) {
 				//beautify: true
 			}
 		},concat: {
-	      css: {
+	      /*css: {
 	        src: ['scr/scss/*.scss'],
 	        dest: 'dist/css/style.css'
-	      },
+	      },*/
 	      js: {
 	        options: {
 	          separator: ';'
@@ -64,7 +64,19 @@ module.exports = function(grunt) {
     			},
     			src:'src/templates/*.html'
     		}
-    	}
+    	},sass: {
+		    dist: {
+		      files: [{
+		        expand: true,
+		        sourcemap: 'inline',
+		        style: 'compressed',
+		        cwd: 'src/sass/',
+		        src: ['*.scss'],
+		        dest: 'dist/css/',
+		        ext: '.css'
+		      }]
+		    }
+  		}
 			
 	});
 
@@ -93,7 +105,7 @@ module.exports = function(grunt) {
 
 	*/
 
-	grunt.registerTask('default', ['clean', 'jshint', 'uglify', 'concat', 'htmlhint']);
+	grunt.registerTask('default', ['clean', 'jshint', 'uglify', 'concat', 'htmlhint','sass']);
    
 
 };
