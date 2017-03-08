@@ -71,12 +71,48 @@ module.exports = function(grunt) {
 		        sourcemap: 'inline',
 		        style: 'compressed',
 		        cwd: 'src/sass/',
-		        src: ['*.scss'],
+		        src: ['*main.scss'],
 		        dest: 'dist/css/',
 		        ext: '.css'
 		      }]
 		    }
-  		}
+  		},
+  		csslint: {
+		  strict: {
+		    options: {
+		      import: 2
+		    },
+		    src: ['dist/css/main.css']
+		  },
+		  lax: {
+		    options: {
+		      import: false
+		    },
+		    src: ['dist/css/main.css']
+		  }
+		},
+		cssmin: {
+		  options: {
+		    mergeIntoShorthands: false,
+		    roundingPrecision: -1
+		  },
+		  cssmin: {
+		    minify: [{
+		      expand: true,
+		      cwd: 'dist/css',
+		      src: ['*.css', '!*.min.css'],
+		      dest: 'dist/css',
+		      ext: '.min.css',
+		      extDot: 'last'
+		    }]
+		  },
+		  concat: {
+		  	options: {},
+		  	files: {
+		  		'dist/css/main.css': ['dist/css/*.css']
+		  	}
+		  }
+		}
 			
 	});
 
@@ -90,6 +126,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-htmlmin');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-csslint');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
 
 	/*
 		npm install  grunt-contrib-clean --save-dev
@@ -105,7 +142,7 @@ module.exports = function(grunt) {
 
 	*/
 
-	grunt.registerTask('default', ['clean', 'jshint', 'uglify', 'concat', 'htmlhint','sass']);
+	grunt.registerTask('default', ['clean', 'jshint', 'uglify', 'concat', 'htmlhint','sass','csslint','cssmin']);
    
 
 };
